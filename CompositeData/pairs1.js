@@ -2,7 +2,6 @@ export const cons = (a, b) => 2 ** a * 3 ** b;
 
 export const getValue = (number, base) => {
   const factor = (acc, i) => {
-    
     if (number < i) return acc;
     if (number % i === 0) return factor(acc + 1, i * base);
     return factor(acc, i * base);
